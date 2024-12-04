@@ -1,0 +1,191 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\demir\\OneDrive\\Masa\u00FCst\u00FC\\Inv\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5F23C8D1-94DE-3565-676E-127C6FE97540}|Assembly-CSharp.csproj|C:\\Users\\demir\\OneDrive\\Masa\u00FCst\u00FC\\Inv\\assets\\scripts\\inventorysystem\\slot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F23C8D1-94DE-3565-676E-127C6FE97540}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventorysystem\\slot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F23C8D1-94DE-3565-676E-127C6FE97540}|Assembly-CSharp.csproj|C:\\Users\\demir\\OneDrive\\Masa\u00FCst\u00FC\\Inv\\assets\\scripts\\inventorysystem\\managers\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F23C8D1-94DE-3565-676E-127C6FE97540}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventorysystem\\managers\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F23C8D1-94DE-3565-676E-127C6FE97540}|Assembly-CSharp.csproj|c:\\users\\demir\\onedrive\\masa\u00FCst\u00FC\\inv\\assets\\scripts\\inventorysystem\\itembuffer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F23C8D1-94DE-3565-676E-127C6FE97540}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventorysystem\\itembuffer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F23C8D1-94DE-3565-676E-127C6FE97540}|Assembly-CSharp.csproj|c:\\users\\demir\\onedrive\\masa\u00FCst\u00FC\\inv\\assets\\scripts\\craftingsystem\\craftingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F23C8D1-94DE-3565-676E-127C6FE97540}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\craftingsystem\\craftingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F23C8D1-94DE-3565-676E-127C6FE97540}|Assembly-CSharp.csproj|c:\\users\\demir\\onedrive\\masa\u00FCst\u00FC\\inv\\assets\\scripts\\inventorysystem\\devportal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F23C8D1-94DE-3565-676E-127C6FE97540}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventorysystem\\devportal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F23C8D1-94DE-3565-676E-127C6FE97540}|Assembly-CSharp.csproj|c:\\users\\demir\\onedrive\\masa\u00FCst\u00FC\\inv\\assets\\scripts\\craftingsystem\\craftingrecipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F23C8D1-94DE-3565-676E-127C6FE97540}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\craftingsystem\\craftingrecipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F23C8D1-94DE-3565-676E-127C6FE97540}|Assembly-CSharp.csproj|c:\\users\\demir\\onedrive\\masa\u00FCst\u00FC\\inv\\assets\\scripts\\inventorysystem\\itemscripts\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F23C8D1-94DE-3565-676E-127C6FE97540}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventorysystem\\itemscripts\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F23C8D1-94DE-3565-676E-127C6FE97540}|Assembly-CSharp.csproj|c:\\users\\demir\\onedrive\\masa\u00FCst\u00FC\\inv\\assets\\scripts\\inventorysystem\\managers\\itemusemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F23C8D1-94DE-3565-676E-127C6FE97540}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventorysystem\\managers\\itemusemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F23C8D1-94DE-3565-676E-127C6FE97540}|Assembly-CSharp.csproj|C:\\Users\\demir\\OneDrive\\Masa\u00FCst\u00FC\\Inv\\assets\\scripts\\inventorysystem\\itemscripts\\consumableitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F23C8D1-94DE-3565-676E-127C6FE97540}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventorysystem\\itemscripts\\consumableitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F23C8D1-94DE-3565-676E-127C6FE97540}|Assembly-CSharp.csproj|C:\\Users\\demir\\OneDrive\\Masa\u00FCst\u00FC\\Inv\\assets\\scripts\\inventorysystem\\interfaces\\iserializeddatachangedlistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F23C8D1-94DE-3565-676E-127C6FE97540}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventorysystem\\interfaces\\iserializeddatachangedlistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ItemBuffer.cs",
+              "DocumentMoniker": "C:\\Users\\demir\\OneDrive\\Masa\u00FCst\u00FC\\Inv\\Assets\\Scripts\\InventorySystem\\ItemBuffer.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\InventorySystem\\ItemBuffer.cs",
+              "ToolTip": "C:\\Users\\demir\\OneDrive\\Masa\u00FCst\u00FC\\Inv\\Assets\\Scripts\\InventorySystem\\ItemBuffer.cs",
+              "RelativeToolTip": "Assets\\Scripts\\InventorySystem\\ItemBuffer.cs",
+              "ViewState": "AQIAALAAAAAAAAAAAAAAwJoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T12:17:29.411Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CraftingRecipe.cs",
+              "DocumentMoniker": "C:\\Users\\demir\\OneDrive\\Masa\u00FCst\u00FC\\Inv\\Assets\\Scripts\\CraftingSystem\\CraftingRecipe.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CraftingSystem\\CraftingRecipe.cs",
+              "ToolTip": "C:\\Users\\demir\\OneDrive\\Masa\u00FCst\u00FC\\Inv\\Assets\\Scripts\\CraftingSystem\\CraftingRecipe.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CraftingSystem\\CraftingRecipe.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC0AAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T12:42:33.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Item.cs",
+              "DocumentMoniker": "C:\\Users\\demir\\OneDrive\\Masa\u00FCst\u00FC\\Inv\\Assets\\Scripts\\InventorySystem\\ItemScripts\\Item.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\InventorySystem\\ItemScripts\\Item.cs",
+              "ToolTip": "C:\\Users\\demir\\OneDrive\\Masa\u00FCst\u00FC\\Inv\\Assets\\Scripts\\InventorySystem\\ItemScripts\\Item.cs",
+              "RelativeToolTip": "Assets\\Scripts\\InventorySystem\\ItemScripts\\Item.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T12:34:31.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "InventoryManager.cs",
+              "DocumentMoniker": "C:\\Users\\demir\\OneDrive\\Masa\u00FCst\u00FC\\Inv\\Assets\\Scripts\\InventorySystem\\Managers\\InventoryManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\InventorySystem\\Managers\\InventoryManager.cs",
+              "ToolTip": "C:\\Users\\demir\\OneDrive\\Masa\u00FCst\u00FC\\Inv\\Assets\\Scripts\\InventorySystem\\Managers\\InventoryManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\InventorySystem\\Managers\\InventoryManager.cs",
+              "ViewState": "AQIAAKoAAAAAAAAAAAAwwNABAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T11:11:22.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Devportal.cs",
+              "DocumentMoniker": "C:\\Users\\demir\\OneDrive\\Masa\u00FCst\u00FC\\Inv\\Assets\\Scripts\\InventorySystem\\Devportal.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\InventorySystem\\Devportal.cs",
+              "ToolTip": "C:\\Users\\demir\\OneDrive\\Masa\u00FCst\u00FC\\Inv\\Assets\\Scripts\\InventorySystem\\Devportal.cs",
+              "RelativeToolTip": "Assets\\Scripts\\InventorySystem\\Devportal.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T12:17:09.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ISerializedDataChangedListener.cs",
+              "DocumentMoniker": "C:\\Users\\demir\\OneDrive\\Masa\u00FCst\u00FC\\Inv\\Assets\\Scripts\\InventorySystem\\Interfaces\\ISerializedDataChangedListener.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\InventorySystem\\Interfaces\\ISerializedDataChangedListener.cs",
+              "ToolTip": "C:\\Users\\demir\\OneDrive\\Masa\u00FCst\u00FC\\Inv\\Assets\\Scripts\\InventorySystem\\Interfaces\\ISerializedDataChangedListener.cs",
+              "RelativeToolTip": "Assets\\Scripts\\InventorySystem\\Interfaces\\ISerializedDataChangedListener.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T11:17:07.569Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Slot.cs",
+              "DocumentMoniker": "C:\\Users\\demir\\OneDrive\\Masa\u00FCst\u00FC\\Inv\\Assets\\Scripts\\InventorySystem\\Slot.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\InventorySystem\\Slot.cs",
+              "ToolTip": "C:\\Users\\demir\\OneDrive\\Masa\u00FCst\u00FC\\Inv\\Assets\\Scripts\\InventorySystem\\Slot.cs",
+              "RelativeToolTip": "Assets\\Scripts\\InventorySystem\\Slot.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T11:11:27.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ItemUseManager.cs",
+              "DocumentMoniker": "C:\\Users\\demir\\OneDrive\\Masa\u00FCst\u00FC\\Inv\\Assets\\Scripts\\InventorySystem\\Managers\\ItemUseManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\InventorySystem\\Managers\\ItemUseManager.cs",
+              "ToolTip": "C:\\Users\\demir\\OneDrive\\Masa\u00FCst\u00FC\\Inv\\Assets\\Scripts\\InventorySystem\\Managers\\ItemUseManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\InventorySystem\\Managers\\ItemUseManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T11:11:02.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ConsumableItem.cs",
+              "DocumentMoniker": "C:\\Users\\demir\\OneDrive\\Masa\u00FCst\u00FC\\Inv\\Assets\\Scripts\\InventorySystem\\ItemScripts\\ConsumableItem.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\InventorySystem\\ItemScripts\\ConsumableItem.cs",
+              "ToolTip": "C:\\Users\\demir\\OneDrive\\Masa\u00FCst\u00FC\\Inv\\Assets\\Scripts\\InventorySystem\\ItemScripts\\ConsumableItem.cs",
+              "RelativeToolTip": "Assets\\Scripts\\InventorySystem\\ItemScripts\\ConsumableItem.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T11:10:42.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CraftingManager.cs",
+              "DocumentMoniker": "C:\\Users\\demir\\OneDrive\\Masa\u00FCst\u00FC\\Inv\\Assets\\Scripts\\CraftingSystem\\CraftingManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CraftingSystem\\CraftingManager.cs",
+              "ToolTip": "C:\\Users\\demir\\OneDrive\\Masa\u00FCst\u00FC\\Inv\\Assets\\Scripts\\CraftingSystem\\CraftingManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CraftingSystem\\CraftingManager.cs",
+              "ViewState": "AQIAAFUAAAAAAAAAAAAcwG8AAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T12:17:10.451Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
