@@ -1,12 +1,12 @@
 using UnityEngine;
-using static Core.Utulities.AskBox;
+using static Dmr.Utulities.AskBox.AskBox;
 
-namespace Core.Utulities
+namespace Dmr.Utulities.AskBox
 {
     public class AskBoxCreator : MonoBehaviour
     {
-        [SerializeField] private Transform parentObject;
-        [SerializeField] private GameObject askBoxObject;
+        [SerializeField] private Transform _parentObject;
+        [SerializeField] private GameObject _askBoxObject;
 
         public static AskBoxCreator instance;
 
@@ -20,7 +20,7 @@ namespace Core.Utulities
 
         public void CreateAskBox(string askBoxTitle, string askBoxDescription, string firstButtonText, string secondButtonText, ButtonAction buttonActionPrimary, ButtonAction buttonActionSecondary)
         {
-            GameObject go = Instantiate(askBoxObject,parentObject);
+            GameObject go = Instantiate(_askBoxObject,_parentObject);
 
             go.GetComponent<AskBox>().SetupAskBox(askBoxTitle, askBoxDescription, firstButtonText, secondButtonText, buttonActionPrimary, buttonActionSecondary);
         }

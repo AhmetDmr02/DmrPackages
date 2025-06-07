@@ -20,23 +20,23 @@ public class UIShrinkUtulity : MonoBehaviour
     }
     #endregion
 
-    private Dictionary<object,Coroutine> coroutines = new Dictionary<object, Coroutine>(25);
+    private Dictionary<object,Coroutine> _coroutines = new Dictionary<object, Coroutine>(25);
     public void StartShrink(object senderObject,Transform targetTransform,Vector3 startScale, Vector3 endScale, float duration = 0.5f)
     {
-        if (coroutines.ContainsKey(senderObject))
+        if (_coroutines.ContainsKey(senderObject))
         {
-            if (!coroutines[senderObject].Equals(null)) 
-                StopCoroutine(coroutines[senderObject]); 
+            if (!_coroutines[senderObject].Equals(null)) 
+                StopCoroutine(_coroutines[senderObject]); 
         }else
         {
-            coroutines.Add(senderObject, null);
+            _coroutines.Add(senderObject, null);
         }
 
-        Coroutine coroutine = StartCoroutine(BounceEffect(targetTransform, startScale, endScale,duration));
-        coroutines[senderObject] = coroutine;
+        Coroutine coroutine = StartCoroutine(SmoothScale(targetTransform, startScale, endScale,duration));
+        _coroutines[senderObject] = coroutine;
     }
 
-    private IEnumerator BounceEffect(Transform targetTransform, Vector3 startScale, Vector3 endScale,float duration )
+    private IEnumerator SmoothScale(Transform targetTransform, Vector3 startScale, Vector3 endScale,float duration )
     {
         float elapsedTime = 0f;
 

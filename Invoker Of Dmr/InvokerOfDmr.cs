@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-namespace Core.Utulities.Invokers
+namespace Dmr.Utulities.Invokers
 {
     public static class InvokerOfDmr
     {

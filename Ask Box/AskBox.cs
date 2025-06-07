@@ -3,40 +3,43 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-namespace Core.Utulities
+namespace Dmr.Utulities.AskBox
 {
     public class AskBox : MonoBehaviour
     {
-        [SerializeField] private TextMeshProUGUI askBoxTitleText,askBoxDescriptionText;
-        [SerializeField] private TextMeshProUGUI primaryButtonText, secondaryButtonText;
-        [SerializeField] private Button primaryButton, secondaryButton;
+        [SerializeField] private TextMeshProUGUI _askBoxTitleText,_askBoxDescriptionText;
+        [SerializeField] private TextMeshProUGUI _primaryButtonText, _secondaryButtonText;
+        [SerializeField] private Button _primaryButton, _secondaryButton;
 
         public delegate void ButtonAction();
 
-        private ButtonAction buttonActionPrimary;
-        private ButtonAction buttonActionSecondary;
+        private ButtonAction _buttonActionPrimary;
+        private ButtonAction _buttonActionSecondary;
 
 
         public void SetupAskBox(string askBoxTitle,string askBoxDescription,string firstButtonText,string secondButtonText,ButtonAction buttonActionPrimary, ButtonAction buttonActionSecondary)
         {
-            this.buttonActionPrimary = buttonActionPrimary;
-            this.buttonActionSecondary = buttonActionSecondary;
+            this._buttonActionPrimary = buttonActionPrimary;
+            this._buttonActionSecondary = buttonActionSecondary;
 
-            primaryButton.onClick.AddListener(() => invokePrimaryButton());
-            secondaryButton.onClick.AddListener(() => invokeSecondaryButton());
+            _primaryButton.onClick.RemoveAllListeners();
+            _secondaryButton.onClick.RemoveAllListeners();
 
-            askBoxTitleText.text = askBoxTitle;
-            askBoxDescriptionText.text = askBoxDescription;
+            _primaryButton.onClick.AddListener(() => invokePrimaryButton());
+            _secondaryButton.onClick.AddListener(() => invokeSecondaryButton());
 
-            primaryButtonText.text = firstButtonText;
-            secondaryButtonText.text = secondButtonText;
+            _askBoxTitleText.text = askBoxTitle;
+            _askBoxDescriptionText.text = askBoxDescription;
 
-            primaryButton.interactable = true;
-            secondaryButton.interactable = true;
+            _primaryButtonText.text = firstButtonText;
+            _secondaryButtonText.text = secondButtonText;
+
+            _primaryButton.interactable = true;
+            _secondaryButton.interactable = true;
         }
         private void invokePrimaryButton()
         {
-            buttonActionPrimary?.Invoke();
+            _buttonActionPrimary?.Invoke();
 
             EventSystem.current.SetSelectedGameObject(null);
 
@@ -44,7 +47,7 @@ namespace Core.Utulities
         }
         private void invokeSecondaryButton()
         {
-            buttonActionSecondary?.Invoke();
+            _buttonActionSecondary?.Invoke();
 
             EventSystem.current.SetSelectedGameObject(null);
 

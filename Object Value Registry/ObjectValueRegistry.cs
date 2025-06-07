@@ -5,21 +5,21 @@ using System.Linq;
 public class ObjectValueRegistry<TValue>
 {
     // A dictionary to hold object references as keys and generic values as values
-    private Dictionary<object, TValue> objectReferenceMap;
+    private Dictionary<object, TValue> _objectReferenceMap;
 
     public event Action<TValue> OnValueChanged; // An event to notify when a value is changed
 
     public ObjectValueRegistry()
     {
-        objectReferenceMap = new Dictionary<object, TValue>(50);
+        _objectReferenceMap = new Dictionary<object, TValue>(50);
     }
     public ObjectValueRegistry(int initialCapacity)
     {
-        objectReferenceMap = new Dictionary<object, TValue>(initialCapacity);
+        _objectReferenceMap = new Dictionary<object, TValue>(initialCapacity);
     }
     public bool DoesHaveValue(TValue value)
     {
-        Dictionary<object, TValue> copiedMap = new Dictionary<object, TValue>(objectReferenceMap).ToDictionary(x => x.Key, x => x.Value);
+        Dictionary<object, TValue> copiedMap = new Dictionary<object, TValue>(_objectReferenceMap).ToDictionary(x => x.Key, x => x.Value);
 
         foreach (var entry in copiedMap.Values)
         {
@@ -33,7 +33,7 @@ public class ObjectValueRegistry<TValue>
     // Method to check if the object reference exists in the dictionary
     public bool Contains(object obj)
     {
-        return objectReferenceMap.ContainsKey(obj);
+        return _objectReferenceMap.ContainsKey(obj);
     }
 
     // Method to add or update an object reference and its associated value
@@ -42,14 +42,14 @@ public class ObjectValueRegistry<TValue>
         if (Contains(obj))
         {
             // If the object exists, update the value
-            objectReferenceMap[obj] = value;
+            _objectReferenceMap[obj] = value;
 
             OnValueChanged?.Invoke(value);
         }
         else
         {
             // If the object doesn't exist, add it to the dictionary
-            objectReferenceMap.Add(obj, value);
+            _objectReferenceMap.Add(obj, value);
 
             // Notify the event
             OnValueChanged?.Invoke(value);
@@ -61,9 +61,9 @@ public class ObjectValueRegistry<TValue>
     {
         if (Contains(obj))
         {
-            TValue val = objectReferenceMap[obj];
+            TValue val = _objectReferenceMap[obj];
 
-            objectReferenceMap.Remove(obj);
+            _objectReferenceMap.Remove(obj);
 
             OnValueChanged?.Invoke(val);
         }
@@ -73,7 +73,7 @@ public class ObjectValueRegistry<TValue>
     public void DisplayContents()
     {
         Console.WriteLine("Object References and Values:");
-        foreach (var entry in objectReferenceMap)
+        foreach (var entry in _objectReferenceMap)
         {
             Console.WriteLine($"{entry.Key} -> {entry.Value}");
         }
