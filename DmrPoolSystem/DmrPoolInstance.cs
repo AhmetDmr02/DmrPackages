@@ -34,7 +34,7 @@ namespace DmrPoolSystem
             _mainParentTransform = new GameObject("DmrPoolSystem").transform;
         }
 
-        #region Public Fields
+        #region Public Methods
         public GameObject GetPoolObject(GameObject prefab)
         {
             if (prefab == null)
@@ -136,7 +136,7 @@ namespace DmrPoolSystem
         }
         #endregion
 
-        #region Private Fields
+        #region Private Methods
         private void PopulatePool(GameObject prefab, int count = 1)
         {
             if (!_currentPool.TryGetValue(prefab, out var pool))
