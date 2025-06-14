@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace DmrDependencyInjector
 {
@@ -17,8 +18,27 @@ namespace DmrDependencyInjector
 
         private static List<string> _failedFields = new List<string>();
 
+        private static bool _appClosing;
+
+        private static bool _sceneChanging;
+        static DIInjectorManager()
+        {
+            //We dont need to release this event since its killed with the app
+            Application.quitting += () => _appClosing = true;
+
+            SceneManager.sceneLoaded += (scene, mode) => _sceneChanging = false;
+        }
+
+        public static void SetSceneChanging() => _sceneChanging = true;
+
         public static void InjectClassDependencies(object target, out InjectionResult result)
         {
+            if (_appClosing || _sceneChanging)
+            {
+                result = InjectionResult.Failed;
+                return;
+            }
+
             if (_factoryService == null)
             {
                 _factoryService = Resources.Load<DmrFactoryService>("DmrFactoryService");
@@ -79,6 +99,11 @@ namespace DmrDependencyInjector
 
         public static bool CanInjectDependencies(object target)
         {
+            if (_appClosing || _sceneChanging)
+            {
+                return false;
+            }
+
             if (_factoryService == null)
             {
                 _factoryService = Resources.Load<DmrFactoryService>("DmrFactoryService");
@@ -122,7 +147,7 @@ namespace DmrDependencyInjector
             return success;
         }
 
-        private static List<FieldInfo> GetInjectableFields(Type type)
+        public static List<FieldInfo> GetInjectableFields(Type type)
         {
             return _cache.GetOrAdd(type, t => t
                 .GetFields(BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public)

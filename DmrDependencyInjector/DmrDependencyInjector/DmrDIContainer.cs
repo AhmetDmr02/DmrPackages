@@ -58,7 +58,6 @@ namespace DmrDependencyInjector
             return true;
         }
 
-
         internal static List<Type> UnregisterInstance(object instance)
         {
             var removed = new List<Type>();

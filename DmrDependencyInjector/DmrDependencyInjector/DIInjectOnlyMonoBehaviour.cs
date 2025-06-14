@@ -6,43 +6,42 @@ using UnityEngine;
 
 namespace DmrDependencyInjector
 {
-    [DefaultExecutionOrder(-1)]
-    public class DIRegisterableMonoBehaviour : MonoBehaviour
+    public class DIInjectOnlyMonoBehaviour : MonoBehaviour
     {
+        [Header("DI Settings")]
+        [SerializeField] protected bool _autoInjectOnStart = true;
         [SerializeField] protected bool _tryAutoInjectOnReferenceLose = true;
+        [Space(15)]
 
         protected InjectionResult _injectResult;
 
-        protected HashSet<Type> _injectedTypes = new();
+        protected HashSet<Type> InjectedTypes = new();
+
         protected void Awake()
         {
-            DIInjectorManager.Register(this);
-
-            DIInjectorManager.OnServiceUnregistered += OnServiceDestroyed;
-
             if (_tryAutoInjectOnReferenceLose)
             {
-                _injectedTypes.Clear();
+                InjectedTypes.Clear();
 
                 List<FieldInfo> injectableFields = DIInjectorManager.GetInjectableFields(GetType());
 
                 foreach (FieldInfo field in injectableFields)
                 {
-                    _injectedTypes.Add(field.FieldType);
+                    InjectedTypes.Add(field.FieldType);
                 }
             }
         }
-        
+
         protected void Start()
         {
-            DIInjectorManager.InjectClassDependencies(this,out _injectResult);
+            DIInjectorManager.InjectClassDependencies(this, out _injectResult);
+
+            DIInjectorManager.OnServiceUnregistered += OnServiceDestroyed;
         }
 
         protected void OnDestroy()
         {
             DIInjectorManager.OnServiceUnregistered -= OnServiceDestroyed;
-
-            DIInjectorManager.Unregister(this);
 
             StopAllCoroutines();
         }
@@ -51,7 +50,7 @@ namespace DmrDependencyInjector
         {
             if (_tryAutoInjectOnReferenceLose)
             {
-                if (_injectedTypes.Contains(type))
+                if (InjectedTypes.Contains(type))
                 {
                     DIInjectorManager.InjectClassDependencies(this, out _injectResult);
 
@@ -65,6 +64,8 @@ namespace DmrDependencyInjector
             yield return new WaitUntil(() => DIInjectorManager.CanInjectDependencies(this));
 
             DIInjectorManager.InjectClassDependencies(this, out _injectResult);
+
+            Debug.Log("Injection recovered");
         }
     }
 }
