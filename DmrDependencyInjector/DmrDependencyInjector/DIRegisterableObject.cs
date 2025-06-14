@@ -7,6 +7,11 @@ namespace DmrDependencyInjector
     {
         protected bool _isDisposed = false;
 
+        public DIRegisterableObject()
+        {
+            DIInjectorManager.Register(this);
+        }
+
         public void Dispose()
         {
             if (_isDisposed) return;

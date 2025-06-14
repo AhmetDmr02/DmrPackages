@@ -91,9 +91,15 @@ namespace DmrDependencyInjector
         {
             var types = new HashSet<Type> { concreteType };
             foreach (var i in concreteType.GetInterfaces())
+            {
+                if(i != typeof(IDisposable))
                 types.Add(i);
+            }
+                
             var baseType = concreteType.BaseType;
-            while (baseType != null && baseType != typeof(object) && baseType != typeof(MonoBehaviour) && baseType != typeof(DIRegisterableObject) && baseType != typeof(DIRegisterableMonoBehaviour))
+            while (baseType != null && baseType != typeof(object) 
+                && baseType != typeof(MonoBehaviour) && baseType != typeof(DIRegisterableObject) && 
+                baseType != typeof(DIRegisterableMonoBehaviour))
             {
                 types.Add(baseType);
                 baseType = baseType.BaseType;
