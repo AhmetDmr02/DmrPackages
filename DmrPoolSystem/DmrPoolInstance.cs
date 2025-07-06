@@ -24,7 +24,7 @@ namespace DmrPoolSystem
         /// it will do a null object scan to clean it and send a warning if sendWarning is true.
         /// liveInstanceMap capacity will be set to 0.5x rememberBufferWarningSize
         /// </param>
-        public DmrPoolInstance(int rememberBufferWarningSize = 500, bool sendWarning = true)
+        public DmrPoolInstance(bool dontDestroyOnLoad = false,int rememberBufferWarningSize = 500, bool sendWarning = true)
         {
             _rememberBufferMaxSize = rememberBufferWarningSize;
             _sendWarning = sendWarning;
@@ -32,6 +32,11 @@ namespace DmrPoolSystem
             _activeObjects = new HashSet<GameObject>(Mathf.CeilToInt(0.5f * rememberBufferWarningSize));
 
             _mainParentTransform = new GameObject("DmrPoolSystem").transform;
+
+            if (dontDestroyOnLoad)
+            {
+                GameObject.DontDestroyOnLoad(_mainParentTransform.gameObject);
+            }
         }
 
         #region Public Methods
@@ -43,10 +48,23 @@ namespace DmrPoolSystem
                 return null;
             }
 
+            if (_mainParentTransform == null)
+            {
+                //DDOL is not activated but scene is changed
+                _mainParentTransform = new GameObject("DmrPoolSystem").transform;
+            }
+
             if (!_currentPool.TryGetValue(prefab, out var pool))
             {
                 RegisterPoolObject(prefab);
                 pool = _currentPool[prefab]; 
+            }
+
+            //if references went null we need to clean that up
+            //it can happen on scene transitions
+            while (pool.Count > 0 && pool.Peek() == null)
+            {
+                pool.Dequeue();
             }
 
             if (pool.Count == 0)
@@ -78,7 +96,18 @@ namespace DmrPoolSystem
 
             if (!_activeObjects.Contains(createdObject))
             {
-                Debug.LogWarning($"Object {createdObject.name} is not active in pool system. Ignoring return.");
+                Debug.LogWarning($"Object {createdObject.name} is not active in pool system. Destroying the object.");
+
+                if (createdObject.TryGetComponent(out IPoolableGameObject poolableObject))
+                {
+                    poolableObject.OnPoolReturn();
+                }
+
+                //To safe guard against destroyed objects
+                createdObject.SetActive(false);
+
+                GameObject.Destroy(createdObject);
+
                 return;
             }
 
@@ -89,7 +118,6 @@ namespace DmrPoolSystem
 
             createdObject.SetActive(false);
             _activeObjects.Remove(createdObject);  // Remove from active tracking
-
 
             if (_liveInstanceMap.TryGetValue(createdObject, out var prefab))
             {
